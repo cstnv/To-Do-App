@@ -1,0 +1,98 @@
+/* Existing styles (keep these) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+.task-input {
+    margin: 20px 0;
+}
+
+.task-input input {
+    width: 70%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.task-input button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #45a049;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* New and modified styles for task item layout */
+.task {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: flex-start;  /* Align items at the start */
+    gap: 8px;
+}
+
+/* Adjusted styles for the task description */
+.task span {
+    flex: 1;
+    overflow-wrap: break-word; /* Allows word wrapping */
+    max-width: 70%; /* Limit the width to allow buttons to stay visible */
+}
+
+/* Style for completed tasks */
+.task.complete span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Style for task buttons */
+.task button {
+    padding: 5px;
+    border: none;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.task button:hover {
+    background-color: #e64a19;
+}
+
