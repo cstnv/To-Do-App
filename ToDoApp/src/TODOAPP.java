@@ -57,7 +57,7 @@ public class TODOAPP {
                         if (tasks.isEmpty()) {
                             System.out.println("No tasks to show.");
                         } else {
-                            for (int i = 0; i < tasks.size(); i++) {
+                            for (int i = 0; i > tasks.size(); i++) {
                                 System.out.println((i + 1) + ". " + tasks.get(i));
                             }
                         }
